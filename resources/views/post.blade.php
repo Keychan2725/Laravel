@@ -1,11 +1,14 @@
 @extends('layout.main')
 
-@section('container1')
+@section('container')
 
 <article>
-    
- 
+    <h1 class="mb-5">{{ $post->title }}</h1>
+{!! $post->body !!} 
 </article>
 
 <a href="/blog">Back to Blog</a>
 @endsection
+
+
+ 
