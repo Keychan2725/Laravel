@@ -9,9 +9,13 @@ class Post extends Model
 {
     use HasFactory;
     // untuk menambahklan data secara instan
-    protected $fillable = ['title' , 'excerpt' , 'body'];
+    // protected $fillable = ['title' , 'excerpt' , 'body'];
 
     // untuk menjaga
     protected $guarded = ['id'];
+
+    public function category(){
+        return $this->belongsTo(Category::class);
+    }
 
 }

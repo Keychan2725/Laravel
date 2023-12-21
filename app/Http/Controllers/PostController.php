@@ -8,29 +8,19 @@ use App\Models\Post;
 class PostController extends Controller
 {
     public function index(){
-        return view('blog',[
+        return view('posts',[
             "title" => "Blog",
-            "post" => Post::all(),
+            "posts" => Post::all(),
             
         ]);
     }
 
     public function show(Post $posts){
-        return view('post', [
+        return view('posts', [
             "title"=> "Single post",
-            "post" => $posts,
+            "posts" => $posts,
           ]) ; 
     }
-//     public function search(Request $request)
-// {
-//   $search = $request->input('search');
 
-//   $posts = Post::where('title', '%' . $search . '%')->get();
-
-//   return view('blog ', [
-//     'title' => $pos,
-//     'posts' => $posts,
-//   ]);
-// }
 
 }
